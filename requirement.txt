@@ -1,0 +1,5 @@
+django
+mysqlclient
+sqlparse
+gunicorn
+django-heroku

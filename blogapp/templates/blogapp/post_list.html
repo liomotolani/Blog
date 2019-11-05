@@ -1,0 +1,16 @@
+   {% extends 'blogapp/base.html' %}
+    {% block content %}
+   <!--The code below is to loop through the list of posts so we dont have them as a queryset-->
+                {% for post in posts %}
+                     <div class="post">
+
+                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                         <p>{{ post.text|linebreaksbr }}</p>
+
+                          <div class="date">
+                             <p>published: {{ post.published_date }}</p>
+                          </div>
+                     </div>
+                {% endfor %}
+
+    {% endblock %}
